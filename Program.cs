@@ -25,6 +25,27 @@ namespace Syslog
                         
                 switch (opcao){
                     case "1":
+
+                    Console.WriteLine("Digite o novo Login: ");
+                    string login = Console.ReadLine();
+
+                    Console.WriteLine("Digite a sua nova senha: ");
+                    string senha = Console.ReadLine();
+
+                    cadUsuario novousuario = new cadUsuario(login, senha);
+
+                    bool usuariocadastrado = novousuario.Cadastrar();
+
+                    if(usuariocadastrado = true){
+                        Console.WriteLine();
+                        Console.WriteLine("Usuário cadastrado com sucesso");
+                        Console.WriteLine();
+                    }
+                    else{
+                        Console.WriteLine();
+                        Console.WriteLine("Ocorreu um erro, contate o administrador");
+                        Console.WriteLine();
+                    }
                     break;
 
                     case "2":
